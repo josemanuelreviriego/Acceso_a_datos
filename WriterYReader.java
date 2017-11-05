@@ -50,6 +50,29 @@ public class WriterYReader {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+		
+		 try{
+	            //Abro stream, crea el fichero si no existe
+	            FileWriter ficheroEscritura2 = new FileWriter("fichero1.txt");
+	            //Escribimos en el fichero un String y un caracter 97 (a)
+	            ficheroEscritura2.write("Esto es una prueba");
+	            ficheroEscritura2.write(97);
+	            //Cierro el stream
+	            ficheroEscritura2.close(); 
+	                //Abro el stream, el fichero debe existir
+	            FileReader ficheroLectura2 = new FileReader("fichero1.txt");
+	            //Leemos el fichero y lo mostramos por pantalla
+	            int valor=ficheroLectura2.read();
+	            while(valor!=-1){
+	                System.out.print((char)valor);
+	                valor=ficheroLectura2.read();
+	            }
+	            //Cerramos el stream
+	            ficheroLectura2.close();
+	        }catch(IOException e){
+	            e.printStackTrace();
+	        }
+	    }
 	}
 
-}
+
