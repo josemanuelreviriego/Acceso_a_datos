@@ -62,7 +62,7 @@ public class Principal {
 						ficheroBuffer.newLine();
 					}
 					//Cerramos el fichero
-					ficheroEscritura.close();
+					ficheroBuffer.close();
 					
 					
 				} catch (IOException e) {
@@ -88,7 +88,7 @@ public class Principal {
 						ultimo = ficheroBuffer.readLine();
 					}
 					//cerramos el fichero
-					FicheroLectura.close();
+					ficheroBuffer.close();
 					
 					
 				} catch (IOException e) {
