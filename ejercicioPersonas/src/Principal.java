@@ -14,6 +14,7 @@ public class Principal {
 		System.out.println("2.Lee el fichero y lo guarda en la estructura");
 		System.out.println("3.Escribe por pantalla los datos");
 		System.out.println("4.Vacia la estructura");
+		System.out.println("5.Salir");
 		Scanner scan = new Scanner(System.in);
 		int opcion = scan.nextInt();
 		scan.reset();
